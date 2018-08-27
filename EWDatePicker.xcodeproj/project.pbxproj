@@ -14,6 +14,9 @@
 		795076282133F3900051B366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795076262133F3900051B366 /* LaunchScreen.storyboard */; };
 		795076332133F3900051B366 /* EWDatePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795076322133F3900051B366 /* EWDatePickerTests.swift */; };
 		7950763E2133F3900051B366 /* EWDatePickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7950763D2133F3900051B366 /* EWDatePickerUITests.swift */; };
+		7950764C2133F4650051B366 /* EWDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7950764B2133F4650051B366 /* EWDatePickerViewController.swift */; };
+		7950764E2133F66C0051B366 /* EWDataPickerPresentAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7950764D2133F66C0051B366 /* EWDataPickerPresentAnimated.swift */; };
+		795076502133FC7F0051B366 /* CommonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7950764F2133FC7F0051B366 /* CommonHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		795076392133F3900051B366 /* EWDatePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EWDatePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7950763D2133F3900051B366 /* EWDatePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWDatePickerUITests.swift; sourceTree = "<group>"; };
 		7950763F2133F3900051B366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7950764B2133F4650051B366 /* EWDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWDatePickerViewController.swift; sourceTree = "<group>"; };
+		7950764D2133F66C0051B366 /* EWDataPickerPresentAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWDataPickerPresentAnimated.swift; sourceTree = "<group>"; };
+		7950764F2133FC7F0051B366 /* CommonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,11 @@
 		7950761C2133F3870051B366 /* EWDatePicker */ = {
 			isa = PBXGroup;
 			children = (
+				7950764F2133FC7F0051B366 /* CommonHelper.swift */,
 				7950761D2133F3870051B366 /* AppDelegate.swift */,
 				7950761F2133F3870051B366 /* ViewController.swift */,
+				7950764B2133F4650051B366 /* EWDatePickerViewController.swift */,
+				7950764D2133F66C0051B366 /* EWDataPickerPresentAnimated.swift */,
 				795076212133F3870051B366 /* Main.storyboard */,
 				795076242133F38F0051B366 /* Assets.xcassets */,
 				795076262133F3900051B366 /* LaunchScreen.storyboard */,
@@ -187,6 +196,7 @@
 		795076122133F3870051B366 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = EW;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Ethan;
@@ -256,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7950764E2133F66C0051B366 /* EWDataPickerPresentAnimated.swift in Sources */,
+				795076502133FC7F0051B366 /* CommonHelper.swift in Sources */,
 				795076202133F3870051B366 /* ViewController.swift in Sources */,
+				7950764C2133F4650051B366 /* EWDatePickerViewController.swift in Sources */,
 				7950761E2133F3870051B366 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
