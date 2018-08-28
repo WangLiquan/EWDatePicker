@@ -1,7 +1,7 @@
 # EWDatePicker
-<h2>弹出半透明viewController的时间选择器</h2>
+<h3>弹出半透明viewController的时间选择器</h3>
 
-实现效果:<br>
+<h5>实现效果:</h5>
 
 controller弹出时:半透明背景渐变展示.时间选择器从下方弹出.选择器日期滚动到当前日期.
 
