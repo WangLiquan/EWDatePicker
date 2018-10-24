@@ -203,13 +203,16 @@
 				TargetAttributes = {
 					795076192133F3870051B366 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					7950762D2133F3900051B366 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 795076192133F3870051B366;
 					};
 					795076382133F3900051B366 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 795076192133F3870051B366;
 					};
 				};
@@ -452,7 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -470,7 +473,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -490,7 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWDatePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EWDatePicker.app/EWDatePicker";
 			};
@@ -511,7 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWDatePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EWDatePicker.app/EWDatePicker";
 			};
@@ -531,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWDatePickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = EWDatePicker;
 			};
@@ -551,7 +554,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWDatePickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = EWDatePicker;
 			};
