@@ -101,7 +101,10 @@ class EWDatePickerViewController: UIViewController {
     ///点击任意位置view消失
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.dismiss(animated: true, completion: nil)
+        let currentPoint = touches.first?.location(in: self.view)
+        if !self.containV.frame.contains(currentPoint ?? CGPoint()) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
