@@ -30,7 +30,10 @@ class EWDatePickerPresentAnimated: NSObject,UIViewControllerAnimatedTransitionin
 
         switch type {
         case .present:
-            let toVC : EWDatePickerViewController = transitionContext.viewController(forKey: .to) as! EWDatePickerViewController
+            guard let toVC = transitionContext.viewController(forKey: .to) as? EWDatePickerViewController else {
+                return
+            }
+//            let toVC : EWDatePickerViewController = transitionContext.viewController(forKey: .to) as? EWDatePickerViewController
             let toView = toVC.view
 
             let containerView = transitionContext.containerView
@@ -43,22 +46,23 @@ class EWDatePickerPresentAnimated: NSObject,UIViewControllerAnimatedTransitionin
                 toVC.backgroundView.alpha = 1.0
                 /// datepicker向上推出
                 toVC.containV.transform =  CGAffineTransform(translationX: 0, y: -10)
-            }) { (finished) in
+            }) { ( _ ) in
                 UIView.animate(withDuration: 0.2, animations: {
                     /// transform初始化
                     toVC.containV.transform = CGAffineTransform.identity
-                }, completion: { (finished) in
+                }, completion: { (_) in
                     transitionContext.completeTransition(true)
                 })
             }
         case .dismiss:
-            let toVC : EWDatePickerViewController = transitionContext.viewController(forKey: .from) as! EWDatePickerViewController
-
+            guard let toVC = transitionContext.viewController(forKey: .from) as? EWDatePickerViewController else {
+                return
+            }
             UIView.animate(withDuration: 0.25, animations: {
                 toVC.backgroundView.alpha = 0.0
                 /// datepicker向下推回
                 toVC.containV.transform =  CGAffineTransform(translationX: 0, y: (toVC.containV.frame.height))
-            }) { (finished) in
+            }) { (_) in
                 transitionContext.completeTransition(true)
             }
         }

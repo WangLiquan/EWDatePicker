@@ -28,17 +28,17 @@ class EWDatePickerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - 生命周期
+    // MARK: - 生命周期
     override func viewDidLoad() {
         super.viewDidLoad()
         drawMyView()
     }
-    //MARK: - Func
-    private func drawMyView(){
+    // MARK: - Func
+    private func drawMyView() {
         self.view.backgroundColor = UIColor.clear
         self.view.insertSubview(self.backgroundView, at: 0)
         self.modalPresentationStyle = .custom//viewcontroller弹出后之前控制器页面不隐藏 .custom代表自定义
@@ -65,7 +65,7 @@ class EWDatePickerViewController: UIViewController {
         self.transitioningDelegate = self as UIViewControllerTransitioningDelegate//自定义转场动画
     }
 
-    //MARK: onClick
+    // MARK: onClick
     @objc func onClickCancel() {
         self.dismiss(animated: true, completion: nil)
     }
@@ -74,7 +74,7 @@ class EWDatePickerViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         /// 直接回调显示
-        if self.backDate != nil{
+        if self.backDate != nil {
             self.backDate!(dateFormatter.date(from: dateString) ?? Date())
         }
         /*** 如果需求需要不能选择已经过去的日期
@@ -113,7 +113,7 @@ class EWDatePickerViewController: UIViewController {
     }
 
 }
-//MARK: - PickerViewDelegate
+// MARK: - PickerViewDelegate
 extension EWDatePickerViewController:UIPickerViewDelegate,UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -121,9 +121,9 @@ extension EWDatePickerViewController:UIPickerViewDelegate,UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
             return 10
-        }else if component == 1 {
+        } else if component == 1 {
             return 12
-        }else {
+        } else {
             let year: Int = pickerView.selectedRow(inComponent: 0) + currentDateCom.year!
             let month: Int = pickerView.selectedRow(inComponent: 1) + 1
             let days: Int = howManyDays(inThisYear: year, withMonth: month)
@@ -157,9 +157,9 @@ extension EWDatePickerViewController:UIPickerViewDelegate,UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             return "\((currentDateCom.year!) + row)\("年")"
-        }else if component == 1 {
+        } else if component == 1 {
             return "\(row + 1)\("月")"
-        }else {
+        } else {
             return "\(row + 1)\("日")"
         }
     }
@@ -169,8 +169,8 @@ extension EWDatePickerViewController:UIPickerViewDelegate,UIPickerViewDataSource
         }
     }
 }
-//MARK: - 转场动画delegate
-extension EWDatePickerViewController:UIViewControllerTransitioningDelegate{
+// MARK: - 转场动画delegate
+extension EWDatePickerViewController:UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animated = EWDatePickerPresentAnimated(type: .present)
         return animated
@@ -180,4 +180,3 @@ extension EWDatePickerViewController:UIViewControllerTransitioningDelegate{
         return animated
     }
 }
-

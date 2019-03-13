@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @objc func onClickSelectButton(){
+    @objc func onClickSelectButton() {
         let dataPicker = EWDatePickerViewController()
         self.definesPresentationContext = true
         /// 回调显示方法
@@ -58,6 +58,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

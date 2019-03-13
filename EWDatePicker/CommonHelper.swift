@@ -19,7 +19,7 @@ struct ScreenInfo {
         return UIScreen.main.bounds.equalTo(CGRect(x: 0, y: 0, width: 375, height: 812))
     }
     static private func navBarHeight() -> CGFloat {
-        return isIphoneX() ? 88 : 64;
+        return isIphoneX() ? 88 : 64
     }
 }
 //便捷的类方法
