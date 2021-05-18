@@ -13,3 +13,5 @@ controller消失时:背景渐变消失,时间选择器向下退出.
 
 ![效果图预览](https://github.com/WangLiquan/EWDatePicker/raw/master/images/demonstration.gif)
 
+#### 更新：
+更新实现默认省市、固定资源排序。
